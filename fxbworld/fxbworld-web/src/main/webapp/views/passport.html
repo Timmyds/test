@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>修改密码</title>
+<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css?gversion=1.0.0">
+<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css?gversion=1.0.0">
+<link href="../static/security/css/forgetPassword.css" rel='stylesheet' type='text/css' />
+<script src="../static/tsh/1.0.0/jquery.min.js?gversion=1.0.0"></script>
+<script src="../static/tsh/1.0.0/jquery.easyui.min.js?gversion=1.0.0"></script>
+<script src="../static/tsh/1.0.0/jquery.easyui.extend.min.js?gversion=1.0.0"></script>
+<script src="../static/common/js/acceptParam/acceptParam.js"></script>
+<script src="../static/common/js/base64/base64.min.js"></script>
+<script src="../static/common/commonfuncode.js"></script>
+<script type="text/javascript" src="../static/security/js/forgetPassword.js"></script>
+<style>
+
+</style>
+<script type="text/javascript">
+	
+</script>
+
+</head>
+<body style="margin: 0 20px;">
+	<div id="container">
+		<div id="header">
+			<img src="../static/security/images/login/logo.png">
+		</div>
+		
+			<div class="forgetpwd">
+
+					<div style="margin: 0px; padding: 10px 0; height: 50px;">
+						<div class="step_parent" index="1">
+							<div id="bg1" style="padding-top: 2px" class="bg step_sp_active">
+								<span>1</span>
+							</div>
+							<div class="xs step_xs_active" id="s1">
+								<span>身份验证</span>
+							</div>
+						</div>
+						<div class="step_parent" index="2">
+							<div id="bg2" style="padding-top: 2px" class="bg">
+								<span>2</span>
+							</div>
+							<div class="xs" id="s2">
+								<span>修改密码</span>
+							</div>
+						</div>
+						<div class="step_parent" index="3">
+							<div id="bg3" class="bg" style="padding-top: 2px">
+								<span>3</span>
+							</div>
+							<div class="xs " id="s3">
+								<span>完成</span>
+							</div>
+						</div>
+
+					</div>
+
+					<div style="height: 30px;"></div>
+					<!--   第一步 -->
+					<div id="div1" style="display: inline-block;">
+						<div style="margin-left: 210px; font-size: 12px">
+							<span>手机验证码有效期为5分钟！</span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">账号：</span> <span> <input class="dtds-input" style="width: 200px;" id="account" maxlength="20" type="text" />
+							</span> <span id="account-ck"></span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">手机号码：</span> <span> <input class="dtds-input" style="width: 200px;" id="phone" type="text" />
+							</span> <span id="phone-ck"></span>
+						</div>
+						<div style="margin-top: 30px;">
+							<span class="title">验证码：</span> <span> <input class="dtds-input" style="width: 76px;" id="code" maxlength="6" type="text" />
+							</span> <span> <a href="javascript:void(0)" class="get-code" id="get-code"> 获取短信验证码 </a> <a href="javascript:void(0);" class="reget-code" id="reget-code" style="display: none;"> 剩余<span id="time">(300)</span>秒
+							</a>
+							</span> <span id="code-ck"></span>
+						</div>
+						<div class="option-div">
+							<a href="javascript:void(0)" class="btn btn-1" onclick="clickNext()">确定</a>
+						</div>
+						<div style="margin-left: 60px; margin-top: 15px; font-size: 12px;">
+							<span><a href="javascript:void(0)" class="ftx-04" id="recoveredType" onclick="recoveredType(11)">使用密保找回密码</a></span>
+						</div>
+					</div>
+					<!--   第二步 -->
+					<div id="div11" style="display: none;">
+						<div style="margin-left: 210px; font-size: 12px">
+							<span>密保问题验证通过后，10分钟内设置密码有效！</span>
+						</div>
+						<div style="margin-top: 10px;">
+							<span class="title">账号：</span> <span> <input class="dtds-input" style="width: 280px;" id="account1" maxlength="20" type="text" />
+							</span> <span id="account1-ck"></span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">问题一：</span> <span> <select id="question1" style="width: 280px; height: 30px;" class="easyui-combobox question">
+							</select><span id="question1-ck"></span>
+							</span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">答案：</span> <span> <input class="dtds-input" style="width: 280px;" id="answer1" type="text" maxlength="20" />
+							</span> <span id="answer1-ck"></span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">问题二：</span> <span> <select id="question2" style="width: 280px; height: 30px;" class="easyui-combobox question">
+							</select><span id="question2-ck"></span>
+							</span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">答案：</span> <span> <input class="dtds-input" style="width: 280px;" id="answer2" type="text" maxlength="20" />
+							</span> <span id="answer2-ck"></span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">问题三：</span> <span> <select id="question3" style="width: 280px; height: 30px;" class="easyui-combobox question">
+							</select><span id="question3-ck"></span>
+							</span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">答案：</span> <span> <input class="dtds-input" style="width: 280px;" id="answer3" type="text" maxlength="20" />
+							</span> <span id="answer3-ck"></span>
+						</div>
+						<div class="option-div" style="padding: 20px 0px 0px 5px;">
+							<a href="javascript:void(0)" class="btn btn-1"  onclick="checkSecurityAnswer()">确定</a>
+						</div>
+						<div style="margin-left: 60px; margin-top: 10px; font-size: 12px;">
+							<span><a href="javascript:void(0)" class="ftx-04" id="recoveredType" onclick="recoveredType(1)">使用手机验证码找回密码</a></span>
+						</div>
+					</div>
+					<!--   第二步 -->
+					<div id="div2" style="display: none;">
+
+						<div style="margin-top: 30px;">
+							<span class="title">新密码：</span> <span> <input class="dtds-input" style="width: 200px;" id="pwd" type="password" maxlength="20" />
+							</span> <span id="pwd-ck"></span>
+						</div>
+						<div style="margin-top: 20px;">
+							<span class="title">确认新密码：</span> <span> <input class="dtds-input" style="width: 200px;" id="repwd" type="password" maxlength="20" />
+							</span> <span id="repwd-ck"></span>
+						</div>
+						<div class="option-div">
+							<a href="javascript:void(0)" class="btn btn-1" id="securitybtn" onclick="checkStep()">确定</a>
+						</div>
+					</div>
+					<!-- 	第三步 -->
+					<div id="div3" style="display: none;">
+						<div style="margin-left: 110px; margin-top: 80px; font-size: 18px;">
+							<i class="icon-01"></i><span>您的密码修改成功，请牢记您设置的密码！<a href="login.html" class="ftx-05">返回登录</a></span>
+						</div>
+
+					</div>
+
+
+
+			</div>
+		</div>
+	<div id="footer">Copyright © 2014-2017 All Rights Reserved 深圳智慧城电子商务有限公司 版权所有</div>
+
+</body>
+</html>

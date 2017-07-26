@@ -1,0 +1,267 @@
+* {margin: 0;padding: 0;}
+       html {
+           height:100%;
+       }
+       body {
+           margin: 0;
+           padding: 0;
+           height:100%;
+           font-family:"微软雅黑";
+           min-height:950px;
+           overflow-y:auto;
+       }
+       ul,li{list-style: none;margin: 0; padding: 0; color: #fff}
+       /*a:link,a:visited,a:hover,a:active{text-decoration:none;}*/
+       a{text-decoration:none;}
+       #container {
+           background: #f0f0f0;
+           height:100%;
+           width: 100%;
+           overflow: hidden;
+           position: relative;
+       }
+
+       #wrapper {
+           position: relative;
+           vertical-align: bottom;
+           height:100%;
+           padding-left: 194px;
+           overflow: hidden;
+       }
+
+       #sidebar {
+           position: absolute;top: 0;left:0;bottom: 0;
+           z-index: 1;
+           height: 100%;
+           width: 194px;
+           background: #314159;
+       }
+
+       #main {
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+           float: left;
+       }
+       #tabs{
+          padding-top: 33px;
+          background: #ffffff;
+       }
+       #tabs .tabs-panels{
+         padding: 20px;
+         overflow: hidden;
+         background: #f0f0f0;
+       }
+       #tabs .tabs,#tabs .tabs li a.tabs-inner{border-width:0px;}
+       #tabs .tabs-header{;padding-top:0;}
+       #tabs .tabs,#tabs .tabs li,#tabs .tabs li a.tabs-inner,
+       #tabs .tabs li.tabs-selected,#tabs .tabs li.tabs-selected a.tabs-inner{background: #ffffff url('images/tabs-icons.png') no-repeat;filter:none;}
+       #tabs .tabs{padding-bottom: 3px; background-position:0 -150px; background-repeat: repeat-x;}
+
+
+       #tabs .tabs-panels .panel-body{
+         overflow: hidden;
+         background: #ffffff;
+         border: 1px solid #dfdfdf;
+         padding: 0px;
+       }
+       #tabs .tabs li{    margin: 0 6px 0px 0; }
+       #tabs .tabs li{background-position:right -60px; padding-right:20px;}
+       #tabs .tabs li a.tabs-inner {
+        border-radius:0;
+          height: 26px!important;
+          min-width: 67px;
+          border-color: #dfdfdf;
+          filter: none;
+          background-color: #fff;
+          color: #333;
+          padding:0 0px 0 20px;
+          background-position:0 -120px;
+      }
+
+     
+
+      .tabs-closable{padding-right: 9px;}
+      #tabs .tabs li a.tabs-close{right: 20px;margin-top: -5px;}
+      #tabs .tabs li.tabs-selected{background-position:right -30px;border-bottom: 1px solid #f0f0f0}
+       #tabs .tabs li.tabs-selected a.tabs-inner {
+        background-position:0 -90px;
+       
+        font-weight:normal;
+          color: #333333;
+      }
+
+       #tabs .tabs li.tabs-first{background-position:0 0px;}
+      #tabs .tabs li.tabs-first a.tabs-inner{background:none;  padding-left: 0;min-width: auto;width: 56px}
+       #tabs .tabs li.tabs-first.tabs-selected{background-position:0 -30px;}
+      #tabs .tabs li.tabs-first.tabs-selected a.tabs-inner{background:none;  padding-left: 0;}
+
+      #tabs .tabs-scroller-left, .tabs-scroller-right{height: 24px!important; width: 24px; bottom: auto; }
+
+       #tabs .tabs-scroller-right{ background: #ffffff url('images/tabs_icons.png') no-repeat -11px center;}
+      #tabs  .tabs li a.tabs-close { background: url('images/tabs_icons.png') no-repeat -34px center;}
+      #tabs .tabs-scroller-left { background: #ffffff url('images/tabs_icons.png') no-repeat 4px center;}
+       #logo{
+         background:#02c1b3 url(images/logo.png) no-repeat center ;
+         width: 194px;
+         height: 60px;
+          color:#fff;
+          line-height: 60px;
+          text-align: center;
+          display: block;
+       }
+
+       #userInfo{
+         padding: 18px;
+         height: 60px;
+         display: block;
+         vertical-align: middle;
+         border-bottom: 2px solid #243650;
+       }
+
+        #userInfo .td1{width: 60px;}
+        #userInfo .td2{}
+       #userInfo img{
+         width: 60px; height: 60px;
+         overflow: hidden;
+         border-radius: 50%;
+         border-width: 0px;
+         float: left;
+         background: #fff;
+         margin-right: 18px;
+       }
+       #userInfo span#userName{display: block;color: #fff;line-height: 1; font-size: 14px; max-height: 42px;overflow:hidden; }
+       #userInfo .logout{ color: #708bb1;background: url(images/logout.png) no-repeat center right;padding-right:15px; height:14px;line-height: 14px;font-size: 12px; cursor: pointer}
+       #menu{
+         position: absolute;
+         top:160px;
+         left: 0;
+          width: 194px;
+         bottom: 0;
+         overflow-y:auto;
+         overflow-x:hidden;
+         font-size: 14px;
+         padding-bottom:110px;
+        }
+
+
+
+       #menu span.sysName{font-size: 12px; padding-left: 20px; color: #02c1b3;line-height: 37px;}
+       #menu ul{
+         position: relative;
+
+       }
+
+       #menu ul li{list-style: none;margin: 0;cursor:pointer;
+         position: relative;border-bottom: 1px solid #243650;
+       }
+       #menu ul li .link{
+         padding: 10px 0 10px 47px;
+         line-height:18px;
+         height: 18px;
+       }
+
+
+       #menu i{position: absolute;right: 20px;top: 12px;
+            -webkit-transition: all 0.4s ;
+          	-o-transition: all 0.4s ;
+          	transition: all 0.4s ;}
+       #menu i.i-menu{margin-right: 11px;right: auto;left: 20px;top: 10px;}
+       #menu ul li a{color: #fff;height: 18px;line-height: 18px;}
+       #menu ul li.hover{
+
+       }
+       /*#menu .open .i-arrow-down{background-image:url("default/images/icons/arrowRight.png");}*/
+       #menu ul ul{
+         width: 100%;
+          display: none;
+       }
+       #menu ul ul li{border-bottom: 0px}
+       #menu ul ul li a{
+         display: block;
+         padding: 10px 0 10px 47px;
+       }
+       #menu ul ul li.click{
+         background: #fff;
+       }
+       #menu ul ul li.click a{color: #16273f}
+       #menuchild{
+         display: none;
+
+         left:194px;
+         top:197px;
+       }
+       #menuchild .menuArrow{
+          position: absolute;
+          background: url(images/menuarrow.png) no-repeat;
+          display: block;
+          width: 6px; height: 15px;left: -6px;
+          top: 11px;
+
+       }
+       #menuchild ul{border-top: 2px solid #16273f;background: #fafafa;padding: 10px;   -moz-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+          -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+          /* For IE 8 */
+          border-right: 1px solid #ccc\9;
+          border-bottom: 1px solid #ccc\9;
+        }
+
+       #menuchild ul li{
+
+         display:block;
+         width: 152px;
+         line-height: 38px;
+         color: #333;
+         text-align: center;
+       }
+       #menuchild ul li a{display: block; color: #333}
+       #menuchild ul li a:hover{
+         background: #e9f0f8;
+         border: 1px solid #dee3e6;
+
+       }
+
+
+       #menu{
+         scrollbar-face-color:#16273f;
+        scrollbar-shadow-color:#243650;
+        scrollbar-highlight-color:#0f1f34;
+        scrollbar-3dlight-color:#314159;
+        scrollbar-darkshadow-color:#314159;
+        scrollbar-track-color:#314159;
+        scrollbar-arrow-color:#16273f;
+       }
+       /* 滚动条美化*/
+       #menu::-webkit-scrollbar {
+           width:10px;
+           height:10px;
+       }
+       #menu::-webkit-scrollbar-button    {
+           /*background-color:#314159;*/
+       }
+       #menu::-webkit-scrollbar-track     {
+           background:#314159;
+       }
+       #menu::-webkit-scrollbar-track-piece {
+
+       }
+       #menu::-webkit-scrollbar-thumb{
+           background:#16273f;
+           border-radius:4px;
+       }
+       #menu::-webkit-scrollbar-corner {
+           background:#82AFFF;
+       }
+       #menu::-webkit-scrollbar-resizer  {
+           background:#FF0BEE;
+       }
+/***   **/
+		.form-group{margin-bottom:10px;margin-top:10px;clear:left;display:block;}
+		.form-group label{float:left;padding:0 10px;line-height: 34px;width:80px;font-size: 14px}
+		.form-group input.value{max-width:300px;}
+		#system-dialog{padding:10px 10px;}
+		 .text-danger {
+			    color: #ff4501;
+			    display: inline-block;
+		  }

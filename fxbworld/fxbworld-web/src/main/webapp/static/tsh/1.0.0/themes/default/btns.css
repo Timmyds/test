@@ -1,0 +1,117 @@
+.btn{margin:0px; padding: 7px 15px;
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+    font-size: 12px;
+    height: 16px;line-height: 16px;border-radius: 5px;
+    text-decoration: none;font-family: "宋体";
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dee3e6;
+  background-color:#f2f2f2;
+  background-image: -moz-linear-gradient( 90deg, rgb(242,242,242) 0%, rgb(251,251,251) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,242,242) 0%, rgb(251,251,251) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(242,242,242) 0%, rgb(251,251,251) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f2f2,endColorstr=#fbfbfb,GradientType=0);
+
+}
+.btn:hover{
+  background-color:#fbfbfb;
+  background-image: -moz-linear-gradient( 90deg,rgb(251,251,251) 0%,rgb(242,242,242) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(251,251,251) 0%, rgb(242,242,242)100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(251,251,251) 0%, rgb(242,242,242) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fbfbfb,endColorstr=#f2f2f2,GradientType=0);
+}
+.btn i{ margin-right: 5px; vertical-align: top}
+
+/*链式按钮*/
+.btn-l{border-width: 0px; color: #333; background:none;filter:none;padding:7px;}
+.btn-l:hover{ color: #000;background:none;filter:none}
+.btn-l i{vertical-align: sub;}
+.btn-1{color: #fff;
+  border-color:#02c1b3;
+  background-color:#02c1b3;
+  background-image: -moz-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#02c1b3,endColorstr=#00d0c1,GradientType=0);
+
+}
+.btn-1:hover{
+  background-color:#00d0c1;
+  background-image: -moz-linear-gradient( 90deg,rgb(0,208,193)  0%, rgb(2,193,179) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(0,208,193) 0%,rgb(2,193,179)  100%);
+  background-image: -ms-linear-gradient( 90deg,rgb(0,208,193)  0%, rgb(2,193,179) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00d0c1,endColorstr=#02c1b3,GradientType=0);
+}
+
+.btn-2{ color: #fff;
+  border-color:#ffa01a;
+  background-color:#ffa01a;
+  background-image: -moz-linear-gradient( 90deg, rgb(255,160,26) 0%, rgb(255,171,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(255,160,26) 0%, rgb(255,171,53) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(255,160,26) 0%, rgb(255,171,53) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffa01a,endColorstr=#ffab35,GradientType=0);
+}
+.btn-2:hover{
+  background-color:#ffab35;
+  background-image: -moz-linear-gradient( 90deg,rgb(255,171,53) 0%, rgb(255,160,26) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(255,171,53) 0%,rgb(255,160,26)  100%);
+  background-image: -ms-linear-gradient( 90deg,rgb(255,171,53)  0%, rgb(255,160,26) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffab35,endColorstr=#ffa01a,GradientType=0);
+}
+
+.btn-3{ color: #fff;
+  border-color:#59ac00;
+  background-color:#59ac00;
+  background-image: -moz-linear-gradient( 90deg, rgb(89,172,0) 0%, rgb(99,191,0) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(89,172,0) 0%, rgb(99,191,0) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(89,172,0) 0%, rgb(99,191,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#59ac00,endColorstr=#63bf00,GradientType=0);
+}
+.btn-3:hover{
+  background-color:#59ac00;
+  background-image: -moz-linear-gradient( 90deg,rgb(99,191,0) 0%, rgb(89,172,0) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(99,191,0) 0%,rgb(89,172,0) 100%);
+  background-image: -ms-linear-gradient( 90deg,rgb(99,191,0)  0%,rgb(89,172,0)100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#63bf00,endColorstr=#59ac00,GradientType=0);
+}
+.btn-4{ color: #777;
+  border-color:#f0f0f0;
+  background-color:#f0f0f0;
+  background-image: none;
+  filter: none
+}
+.btn-4:hover{
+   color: #fff;
+  background-color:#314159;
+  border-color:#314159;
+  background-image: none;
+  filter: none;
+}
+.btn-primary{}
+.btn-default{}
+.btn-success{}
+.btn-warning{}
+.btn-info{}
+.btn-danger{}
+.btn-link{}
+
+textarea{
+  border:1px solid #dee3e6;
+  font-size: 12px;
+  margin: 0;
+  padding: 4px;
+  white-space: normal;
+  vertical-align: top;
+  outline-style: none;
+  resize: none;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;}
+textarea:focus {
+  border-color: #02c1b3;
+  -moz-box-shadow: 0 0 3px 0 #D4D4D4;
+  -webkit-box-shadow: 0 0 3px 0 #D4D4D4;
+  box-shadow: 0 0 3px 0 #D4D4D4;
+}

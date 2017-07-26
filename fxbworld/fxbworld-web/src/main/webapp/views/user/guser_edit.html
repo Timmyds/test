@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<title>编辑用户</title>
+	<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css">
+    <script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+    <script src="../../static/tsh/1.0.0/plugins/tsh/tsh.form/tsh.validate.js" ></script>
+	<script src="../../static/tsh/1.0.0/plugins/tsh/tsh.form/tsh.form.js" ></script>
+	<script src="../../static/common/js/base64/base64.min.js"></script>
+	<script src="../../static/system/js/commom.js"></script>
+	<script src="../../static/common/commonfuncode.js"></script>
+	<script src="../../static/user/userEdit.js"></script>
+<style type="text/css">
+.form td {
+            padding: 10px 0
+        }
+  #tsh-title .btn-4 {
+      position: absolute;
+      top: -5px;
+  }
+</style>
+</head>
+<body>
+	<div id="tsh-title">
+        <h3><a  href="javascript:;" class="btn btn-4" onclick="window.history.back(0);">返回</a>
+      <span class="t1" style="padding-left:55px;"></span><span class="t2"></span>  </h3>
+        <div class="title-border"></div>
+    </div>
+    <form id="updateGUserForm" method="post" class="form">
+        <table cellpadding="5">
+            <tr>
+                <td style="text-align:right"> 账号名称：</td>
+                <td>
+                    <input name="loginName" id="loginName" class="easyui-textbox" style="width:270px; height:30px;" type="text" prompt="输入账号名称" missingMessage="请填写账号名称" readonly:true/>
+                    <input type="hidden"  name="id" id="id" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">账号密码：</td>
+                <td>
+                    <input name="loginPwd" id="loginPwd" class="easyui-textbox" style="width:270px; height:30px;" type="passWord" prompt="输入账号密码" missingMessage="请填写账号密码" readonly:true/>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right"><span class="text-red">*</span> 用户名称：</td>
+                <td>
+                    <input name="userName" id="userName" class="easyui-textbox" style="width:270px; height:30px;" type="text" prompt="输入用户名称" missingMessage="请填写用户名称" data-options="required:true,err:err">
+                    <span>长度为2-20位字符串</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right"><span class="text-red">*</span> 手机号码：</td>
+                <td>
+                    <input id="phone" name="phone" class="easyui-textbox" type="text" style="width:270px; height:30px;" name="tel" data-options="required:true,validType:'mobile',err:err">
+                    <span>长度为11位有效手机号码</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right">账号状态：</td>
+                <td>
+                    <select id="status" class="easyui-combobox" name="status" data-options="editable:false" panelHeight="auto" style="width:270px; height:30px;">
+                        <option value="1">启用</option>
+                        <option value="0">停用</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right"><span class="text-red">*</span>角色类型：</td>
+                <td>
+              	  <input id="roleId"  name="roleId" prompt="请选择角色" validType="checkSelect['请选择角色','请选择角色']" style="width: 270px;height:30px">
+                </td>
+            </tr>
+            <tr id="user_group"  style="display: none;">
+                <td style="text-align:right">用户组：</td>
+                <td>
+              	  <input id="userGroup1" name="groupIds" prompt="请选择用户组" validType="checkSelect['请选择用户组','请选择用户组']" style="width: 270px;height:30px">
+              	   <a href="javascript:void(0)" class="btn" id="addgroupBtn">添加</a>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-1" id="submit">保存</a>
+                    <a href="javascript:void(0)" class="btn" onclick="window.history.back(0);">取消</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

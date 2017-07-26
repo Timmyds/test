@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>账号修改记录</title>
+<link rel="stylesheet" href="../../static/tsh/1.0.0/themes/easyui.css" />
+<link rel="stylesheet" href="../../static/tsh/1.0.0/themes/style.css" />
+<script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+<script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+<script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+<script src="../../static/tsh/1.0.0/plugins/datagrid-cellediting.js"></script>
+<script src="../../static/common/commonfuncode.js"></script>
+<script src="../../static/security/js/operate_log_list.js"></script>
+
+<style type="text/css">
+.datagrid-row {
+	height: 40px;
+}
+</style>
+
+</head>
+
+<body style="margin: 0 20px">
+
+	<div id="tsh-title">
+		<h3>
+			<span class="t1">账号修改记录</span>
+		</h3>
+		<div class="title-border"></div>
+	</div>
+
+	<div class="easyui-tabs" id="tabs" tabHeight="40" style="width: 100%; height: auto">
+		<div title="账号密码修改记录" id="cost" style="font-size: 14px">
+			<div id="tbpwd">
+				<div style="height: 35px; margin-left: 30px; margin-top: 15px">
+					<span >密码修改记录只记录最近20条，请您核对修改时间、地点及操作人，如您确定非你本人修改过密码，请立即“修改登录密码”以保障账号安全。因宽带提供商导致的IP地址变化，登录地点有可能显示不准确，请您以登录时间为参考基准</span>
+				</div>
+			</div>
+			<table id="dataGridpwd" class="easyui-datagrid"></table>
+
+		</div>
+
+
+		<div title="更换绑定手机号记录" id="roleRatioRule" style="font-size: 14px" href="operatephone_list.html" >
+	<!-- 		<div id="tbphone">
+				<div style="height: 35px; margin-left: 30px; margin-top: 15px">
+					<span >更换绑定手机记录只记录最近20条，请您核对修改时间、绑定手机号码及操作人，如您确定非你本人更换绑定手机，请立即“更换绑定手机”以保障账号安全。</span>
+				</div>
+			</div>
+			<table id="dataGridphone" class="easyui-datagrid"></table> -->
+		</div>
+
+	</div>
+</body>
+
+</body>
+</html>

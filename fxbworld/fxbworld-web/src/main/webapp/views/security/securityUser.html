@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<title>修改密码</title>
+	<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/security/css/securityPage.css">
+    <script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+	<script src="../../static/common/js/base64/base64.min.js"></script>
+	<script src="../../static/common/commonfuncode.js"></script>
+	<script src="../../static/system/js/commom.js"></script>
+	<script src="../../static/security/js/securityUser.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+ 	
+    <div id="tsh-title">
+	        <h3><span class="t1">您的账号基本信息</span></h3>
+	        <div class="title-border"></div>
+	      </div>
+	      
+	<div  class="security-header"><span class="security1">上次登录时间：</span><span id='logintime'></span> 
+                               <span class="security1">上次登录IP：</span><span id=loginIp></span>
+	                           <span class="security1">上次登录地址：</span><span id="loginAddress"></span>
+		<br><span style="float: right;margin:15px 50px"><a href="javascript:void(0)" class="ftx-05"  onclick="loginLogList()">查看历史登录记录</a></span></div>
+     <div class="mod-main mod-comm">
+                    <div class="mt"><h3>安全中心</h3></div>
+                    <div class="mc" id="safe05">
+                        <div class="saft-item-lists">
+                            <div class="warn-box">
+                                <strong>账号安全等级：</strong>
+                                      <strong id="rank-text">高</strong><i id="cla" class="safe-rank safe-rank05"></i>
+                                        
+                           </div>
+                        <div class="safe-item">
+                            <div class="fore1"><s class="icon-01"></s>登录密码</div>
+                            <div class="fore2"><span >安全性高的密码可以使账号更安全。建议您定期更换密码，且设置一个包含数字和字母，并长度超过6位以上的密码。</span></div>
+                            <div class="fore3"><a href="modifyPwd.html" class="ftx-05">修改</a></div>
+                        </div>
+
+                        <div class="safe-item">
+                              <div class="fore1"><s class="icon-02" id="isSecurity"></s>密保问题</div>
+                              <div class="fore2"><span >是您找回登录密码的方式之一。建议您设置一个容易记住，且最不容易被他人获取的问题及答案，更有效保障您的密码安全。</span></div>
+                              <div class="fore3"><a href="maintainSecurity.html" class="ftx-05" id="security" >设置</a></div>
+                                                    </div>
+
+                        <div class="safe-item">
+                               <div class="fore1"><s class="icon-01" id="isphone"></s>绑定手机</div>
+                                <div class="fore2" id="phone">
+                                    <span >您绑定的手机：</span><strong id="mobile" > </strong>&nbsp;&nbsp;
+                                    <span >绑定的手机号码可用于找回密码等操作，若已丢失或停用，请立即更换，</span><span style="color:#cc0000;">避免账户被盗</span>
+                                </div>
+                              
+                         </div>
+             <!--             <div class="safe-item">
+                               <div class="fore1"><s class="icon-02" id="isMail"></s>安全邮箱</div>
+                                <div class="fore2" id="sec_mail">
+                                    <span >账号设置的安全邮箱为：</span><strong id="mail" > </strong>&nbsp;&nbsp;
+                                    <span >，安全邮箱可用于找回密码或修改绑定手机号码。</span>
+                                </div>
+                              <div class="fore3"><a class="ftx-05"  href="maintainMail.html" id="e_mail">设置</a></div>
+                         </div> -->
+                         <div class="safe-item">
+                                 <div class="fore1"><s class="icon-02" id="isProtection"></s>登录保护</div>
+                                  <div class="fore2">
+                                                <span >启用登录保护后，登录时需通过手机短信验证身份</span>
+                                  </div>
+                                 <div class="fore3"><a class="ftx-05" href="javascript:void(0)" id="protection" onclick="protectionLogin()">启用</a></div>
+                         </div>
+                       <div class="safe-item">
+                            <div class="fore1"><span style="margin-left: 33px">账号修改记录</span></div>
+                            <div class="fore2"><span >记录账号密码修改次数和手机绑定解绑次数</span></div>
+                            <div class="fore3"><a class="ftx-05" href="javascript:void(0)" onclick="operateList()">查看</a></div>
+                        </div>
+                        <div class="safe-item user_operate_log" style="display: none">
+                             <div class="fore1">商家账号修改记录
+                                </div>
+                                <div class="fore2"><span >平台运营人员可以查看网点、县域、供应商的账号密码修改记录</span>
+                                </div>
+                                <div class="fore3"><a class="ftx-05" href="javascript:void(0)" onclick="userOperateList()" >查看</a></div>
+                        </div>
+
+                    
+                
+                    </div>
+                </div>
+            </div>
+    	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

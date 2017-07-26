@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>淘实惠管理系统</title>
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+	<meta HTTP-EQUIV="Expires" CONTENT="0"> 
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="this is my page">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/views/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../static/tsh/1.0.0/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../static/tsh/1.0.0/themes/default/icons.css">
+     <link rel="stylesheet" type="text/css" href="../static/tsh/1.0.0/themes/default/easyui.extent.css">
+    <link rel="stylesheet" type="text/css" href="../static/home/1.0.0/home.css?version=v3.0.1">
+    <script src="../static/tsh/1.0.0/jquery.min.js"></script>
+    <script src="../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+    <script src="../../static/common/js/base64/base64.min.js"></script>
+    <script src="../static/common/commonfuncode.js"></script>
+    <script src="../static/home/1.0.0/home.js?version=v3.1.4"></script>
+    <style type="text/css">
+
+			.l-btn-icon-left .l-btn-text{
+			margin:0 4px;
+			padding: 2px 15px;
+			}
+			.dialog-button{
+			text-align: center;
+			} 
+			.dialog-button a{
+			color: #fff;
+     		border-color: #02c1b3; 
+     		background-color: #02c1b3; 
+    		background-image: -moz-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+    		background-image: -webkit-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+			}
+			
+			.dialog-button a:hover{
+			color: #fff;
+     		border-color: #02c1b3; 
+     		background-color: #02c1b3; 
+    		background-image: -moz-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+    		background-image: -webkit-linear-gradient( 90deg, rgb(2,193,179) 0%, rgb(0,208,193) 100%);
+			}
+	
+			.form-group{margin-bottom:15px;clear:left;display:block;}
+			.form-group label{float:left;padding:0 10px;line-height: 34px;}
+			input.radio{max-width: 24px; max-height: 24px;cursor: pointer;} 
+			.form-group input.value{max-width:300px;}
+			.form-group input.radio{max-width:24px;max-height:24px;cursor:pointer;}
+			#header-right{ position:absolute; right: 30px;  height: 50px;  top: 10px;}
+			
+    </style>
+</head>
+<body>
+<div id="container">
+  <!-- 侧边栏开始 -->
+  <div id="sidebar">
+     <div id="logo">
+     </div>
+     <div id="userInfo">
+       <table>
+          <tr>
+              <td class="td1"><img src="../static/home/1.0.0/images/guest.png"></td>
+              <td  class="td2"><span id="userName" style="word-break: break-all;white-space: pre-wrap;"></span>
+                <a class="logout J_Logout"  href="../usercentre/outLogin.do">退出</a>
+              </td>
+          </tr>
+       </table>
+     </div>
+     <!-- 菜单开始 -->
+     <div id="menu" class="addTab">
+       <!-- 平台菜单开始 -->
+       
+       <!-- 平台菜单结束 -->
+     </div>
+     <!-- 菜单结束 -->
+  </div>
+  <!-- 侧边栏结束 -->
+  <!-- 主体开始 -->
+ <div id="wrapper">
+     <div id="main">
+     
+		<div id="header-right">
+		
+		<div style="float:left;margin-top:4px;">
+			<span  title="系统知识库" ><a href="http://www.tsh365.icoc.in/index.jsp" target="_blank" >系统知识库</a></span>
+			|&nbsp;
+			<span  title="商品售后请按1，系统问题请按2，电子屏售后请按3，超级返请按6">客服咨询:400-833-2882</span>
+			</div>
+			<div style="float:right;margin-left: 10px"> <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAzODIxMF80MTMzNDRfNDAwMDU1ODUxOF8"></script></div>
+		</div>
+       <div id="tabs" class="easyui-tabs" fit="true" border="false">
+       
+           <div title="首页" style="padding-bottom: 30px">
+               <div id="welcome_auc" style="margin:10px; font-size:18px; height:100%;overflow:auto;padding-bottom: 30px"> 
+               	欢迎
+               </div> 
+               
+           </div>
+       </div>
+     </div>
+ </div>
+ <!-- 主体结束 -->
+</div>
+    <div id="mm" class="easyui-menu cs-tab-menu">
+        <div id="mm-tabupdate">刷新</div>
+        <div class="menu-sep"></div>
+        <div id="mm-tabclose">关闭</div>
+        <div id="mm-tabcloseother">关闭其他</div>
+        <div id="mm-tabcloseall">关闭全部</div>
+    </div>
+
+    
+</body>
+</html>
+<script type='text/html' id='user-update-pwd'>
+
+<div id='system-dialog'>
+<form id="base-form" name="base-form" class="form" >
+
+<div class="form-group">
+	<label for='group'>新密码:</label>
+	<input class="textbox value" style="width:240px; height:28px;" maxlength="16"  placeholder="新密码为6-16个字符，首尾不支持空格" id="newpwd" name="newpwd" type="password"  >
+</div>
+<div class="form-group">
+	<label for='group'>重复新密码:</label>
+	<input class="textbox value" style="width:240px; height:28px;" maxlength="16"  placeholder="新密码为6-16个字符，首尾不支持空格" id="repwd" naem="repwd" type="password" >
+</div>
+<div><span style="color: #333;font-size: 6px">说明：请尽量使用字母、数字组合的密码方式，不要使用有规律的密码，如123456,888888等</span></div>
+</from>
+</div>
+</script>

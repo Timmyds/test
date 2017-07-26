@@ -1,0 +1,154 @@
+
+  #tsh-title .btn-4 {
+      position: absolute;
+      top: -5px;
+  }
+  .font14{
+     
+    }
+    .security1{
+    margin:15px 0;
+    margin-left: 30px;
+    }
+    .divcss5-4{}
+    
+
+
+
+
+
+.mod-main {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: 850px;
+}
+.mod-comm {
+    padding: 10px 20px 20px;
+}
+
+
+ .icon-01,.safe-item .fore1 .icon-01 {
+	background-position:-64px 0
+}
+.safe-item .fore2 {
+	border-left:1px solid #E6E6E6;
+	width:450px;
+	height:auto;
+	line-height:20px;
+	padding:4px 0 4px 15px
+}
+.safe-item .fore3 {
+	text-align:center;
+	width:140px
+}
+.safe-item .fore3 a {
+	margin:0 5px
+}
+.safe-item .btn {
+	vertical-align:middle
+}
+
+.safe-item {
+	display:inline-block;
+	display:block;
+	padding:20px 0;
+	border-bottom:1px solid #e6e6e6
+}
+.safe-item:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}* html .safe-item {
+	height:1%
+}
+ .safe-item {
+	min-height:1%
+}
+.saft-item-lists {
+	margin-bottom:-31px;
+	overflow:hidden
+}
+.warn-box {
+	background:#fffdee;
+	padding:5px;
+	margin-left: 80px
+}
+.safe-item .fore1,.safe-item .fore2,.safe-item .fore3 {
+	float:left;
+	height:32px;
+}
+.safe-item .fore3-extra {
+	line-height:18px
+}
+.safe-item .fore1 {
+	width:175px;
+	text-align:left;
+	font-family:\5FAE\8F6F\96C5\9ED1;
+	font-size:16px;
+	padding-left:25px
+}
+.icon-01,.safe-item .fore1 s {
+	display:inline-block;
+	width:32px;
+	height:33px;
+	background:url(../images/icon-msg2013.png) no-repeat;
+	vertical-align:middle;
+	margin-right:33px
+}
+.icon-01,.icon-02,.icon-03 {
+	float:left;
+	margin-bottom:10px
+}
+.safe-item .fore1 strong {
+	margin-right:5px
+}
+.ftx-05{
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    color: #004080;
+    text-align: left;}
+ .security-header{
+ width: 850px;margin-top: 20px;
+ border-bottom:1px solid  #dee3e6; height:60px;width:850px;
+ font-family:'Arial Normal', 'Arial';
+    color: #333;
+    font-size: 14px;
+ }
+.safe-rank{
+    background: url(../images/safe-rank2016.png) no-repeat 0 0;
+    display: inline-block;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    margin-left: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 310px;
+}
+/*  .safe-rank05 {
+    background-position: 0 -72px;
+} */
+.safe-rank01 {
+    background-position: 0 1px;
+}
+
+.safe-rank02 {
+    background-position: 0 -17px;
+}
+.safe-rank03 {
+    background-position: 0 -35px;
+}
+.safe-rank04 {
+    background-position: 0 -53px;
+}
+.safe-rank05 {
+    background-position: 0 -72px;
+}
+#rank-text{
+	margin-right: 10px;
+	margin-left: 10px;
+}

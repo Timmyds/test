@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fxb.world.dao.TPwdOperateLogMapper" >
+  <resultMap id="BaseResultMap" type="com.fxb.world.entity.TPwdOperateLog" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="operate_ip" property="operateIp" jdbcType="VARCHAR" />
+    <result column="operate_address" property="operateAddress" jdbcType="VARCHAR" />
+    <result column="operate_mode" property="operateMode" jdbcType="VARCHAR" />
+    <result column="login_name" property="loginName" jdbcType="VARCHAR" />
+    <result column="operate_date" property="operateDate" jdbcType="TIMESTAMP" />
+    <result column="operate_user_name" property="operateUserName" jdbcType="VARCHAR" />
+    <result column="operate_user_id" property="operateUserId" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>

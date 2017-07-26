@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>账号修改记录</title>
+<link rel="stylesheet" href="../../static/tsh/1.0.0/themes/easyui.css" />
+<link rel="stylesheet" href="../../static/tsh/1.0.0/themes/style.css" />
+<script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+<script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+<script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+<script src="../../static/tsh/1.0.0/plugins/datagrid-cellediting.js"></script>
+<script src="../../static/common/commonfuncode.js"></script>
+<script src="../../static/common/js/acceptParam/acceptParam.js"></script>
+<script src="../../static/security/js/user_operate_log_list.js"></script>
+<style type="text/css">
+.datagrid-row {
+	height: 45px;
+}
+</style>
+
+
+</head>
+
+<body style="margin: 0 20px">
+
+	<div id="tsh-title">
+		<h3>
+			<span class="t1">商家账号修改记录</span>
+		</h3>
+		<div class="title-border"></div>
+	</div>
+
+	<div class="easyui-tabs" id="tabs"  style="width: 100%;height: 800px">
+		<div title="账号密码修改记录" id="cost" style="font-size: 14px">
+			<div id="tbpwd" style="padding: 10px">
+			<form class="tsh-toolbar" >
+				<label style=" margin-left: 30px; "><span>账号名：</span><input id="loginName" class="easyui-textbox" data-options="validType:'maxLength[20]'" style="width:170px;height:30px;" prompt="输入账号名" /></label>
+				 <label class="wm-usc-user-find"><a href="javascript:void(0);" class="btn btn-1" id="searchPwd"><i class="i-search"></i>查询</a></label>
+				</form>
+			</div>
+			<table id="dataGridpwd" class="easyui-datagrid"></table>
+		</div>
+
+
+		<div title="更换绑定手机号记录"   style="font-size: 14px;padding: 10px" href="user_operatephone_list.html" >
+	<!-- 		<div id="tbphone">
+				<div style="height: 35px; margin-left: 30px; margin-top: 15px">
+					<span >更换绑定手机记录只记录最近20条，请您核对修改时间、绑定手机号码及操作人，如您确定非你本人更换绑定手机，请立即“更换绑定手机”以保障账号安全。</span>
+				</div>
+			</div>
+			<table id="dataGridphone" class="easyui-datagrid"></table> -->
+		</div>
+
+		<div title="历史登录记录"  style="font-size: 14px;padding: 10px"  href="user_login_list.html" >
+	
+		</div>
+
+	</div>
+</body>
+
+</body>
+</html>

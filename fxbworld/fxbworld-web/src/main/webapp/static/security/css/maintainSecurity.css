@@ -1,0 +1,159 @@
+#div3 li {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+
+#div4 table {
+	border: solid #dee3e6;
+	border-width: 1px 0px 0px 1px;
+	border-collapse: collapse;
+}
+
+#div4 tr {
+	height: 35px;
+	line-height: 25px
+}
+
+.step_parent {
+	float: left;
+	width: 200px;
+	cursor: default;
+}
+
+.bg {
+	width: 200px;
+	height: 25px;
+	text-align: center;
+	color: #777777;
+	padding-top: 2px;
+	background-size: 200px 17px;
+	background-repeat: no-repeat;
+	background-image: url(../images/step2.png);
+}
+
+.step_sp_active {
+	background-image: url(../images/step1.png);
+	color: #ffffff
+}
+
+.xs {
+	text-align: center;
+	width: 200px;
+	margin-top: 15px;
+	color: #a9a9a9;
+	font-size: 15px;
+}
+
+.step_xs_active {
+	color: #02c1b3;
+	font-size: 15px;
+	padding-top:
+}
+
+.title {
+	width: 204px;
+	display: inline-block;
+	text-align: right;
+	font-size: 14px;
+}
+
+.step-div {
+	padding: 50px 0px 0px 5px;
+	width: 700px;
+}
+
+.dtds-input {
+	border: 1px solid #DBDBDB;
+	outline: none;
+	height: 30px;
+	border-radius: 5px;
+	text-indent: 6px;
+}
+
+.get-code {
+	text-decoration: none;
+	display: inline-block;
+	background: url("../images/btn-bg1.png") repeat-x center center;
+	height: 30px;
+	width: 116px;
+	border-radius: 5px;
+	border: 1px solid #DBDBDB;
+	color: #737373;
+	font-weight: 400;
+	text-align: center;
+	line-height: 30px;
+}
+
+.reget-code {
+	text-decoration: none;
+	display: inline-block;
+	background: url("../images/btn-bg2.png") repeat-x center center;
+	height: 30px;
+	width: 99px;
+	border-radius: 5px;
+	border: 1px solid #DBDBDB;
+	color: #737373;
+	font-weight: 300;
+	text-align: center;
+	line-height: 30px;
+}
+
+.option-div {
+	padding: 50px 0px 0px 5px;
+	width: 700px;
+	margin-left: 200px
+}
+
+/* #container {
+	height: 428px;
+	position: absolute;
+	width: 100%;
+	top: 40%;
+	margin-top: -254px;
+}
+
+#header {
+	padding-top: 10px;
+	padding-bottom: 24px;
+	max-width: 1000px;
+	margin: 0 auto
+}
+
+#footer {
+	font-size: 14px;
+	position: fixed;
+	bottom: 0px;
+	background: #fff;
+	padding: 36px 0px;
+	color: #a0a0a0;
+	text-align: center;
+	width: 100%
+}
+ */
+ .icon-01 {
+	display:inline-block;
+	width:32px;
+	height:33px;
+	background:url(../images/icon-msg2013.png) no-repeat;
+	vertical-align:middle;
+	margin-right:33px
+}
+ .icon-01 {
+	background-position:-64px 0
+}
+.red{color:red;}
+.ok{
+		display: inline-block;
+		height:20px;
+		width:60px;
+		background:url(../images/green.png)  no-repeat bottom center;
+	}
+	.ftx-05 {
+    font-family: 'Arial Normal', Arial;
+    font-weight: 400;
+    font-style: normal;
+    color: #02c1b3;
+    text-align: left;
+}
+.ftx-05:hover { text-decoration:underline;}

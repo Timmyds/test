@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+	<meta name="renderer" content="webkit">
+	<title>用户列表</title>
+	<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css?gversion=1.0.0">
+    <link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css?gversion=1.0.0">
+    <script src="../../static/tsh/1.0.0/jquery.min.js?gversion=1.0.0"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.min.js?gversion=1.0.0"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js?gversion=1.0.0"></script>
+    <script src="../../static/common/js/acceptParam/acceptParam.js"></script>
+	<script src="../../static/common/commonfuncode.js"></script>
+	<script src="../../static/authority/authority.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/user/business_userList.js"></script>
+		<style type="text/css">
+		    label{vertical-align: middle; padding:0 10px; height: 20px; line-height: 20px;margin: 0}
+		    label input[type=checkbox]{display: inline-block; margin: 0}
+			.authority{border: 1px #ccc solid}
+			.checkAll{height: 40px; line-height: 40px;display: inline-block;}
+			.sysrow{font-weight:bold,height: 40px; line-height: 40px;width:200px;display: inline-block;border-right: 1px solid #ccc;}
+			.row1{border-top:1px solid #ccc;}
+			.th,.row1 th{height: 40px; line-height: 40px;display: inline-block; }
+			.th{font-weight:bold }
+		    .row2 {border-top:1px solid #ccc; }
+		    .row2 label{font-weight: normal;}
+		    .row2 .th{display: inline-block; border-right: 1px solid #ccc;}
+		    .row3{display: inline-block;height: 40px; line-height: 40px;}
+		    .text-danger{display: inline-block;}
+		</style>
+	</head>
+	<body style="margin:0 20px;">
+	  <div id="tb" >
+	  <div id="tsh-title">
+        <h3><span class="t1">用户管理</span></h3>
+        <div class="title-border"></div>
+      </div>
+	      <form class="tsh-toolbar">
+	        <br style='display: none;' class="wm-usc-user-add" />
+	        <label><span>账号名或用户名：</span><input id="name" class="easyui-textbox" data-options="validType:'maxLength[20]'" style="width:170px;height:30px;" prompt="输入商家账号名或用户名" /></label>
+			  <label><span>商家角色：</span> <input class="easyui-combobox" editable="false" style="width:170px; height:30px;" prompt="商家角色" id="roleType" 
+				data-options="panelHeight:'auto',
+									valueField: 'id',textField: 'value',
+									data: [
+									{id: '0',value: '全部'},
+									{id: '3',value: '县域中心'},
+									{id: '5',value: '供应商'}									
+									]" /></label>
+	        <label style="display: none;" class="wm-usc-user-find"><a href="javascript:void(0);" class="btn btn-1" id="search"><i class="i-search"></i>查询</a></label>
+	        <label style="display: none;" class="wm-usc-user-clear"><a href="javascript:void(0);" class="btn" onclick="clearForm();">清空</a></label>
+	      </form>
+	  </div>
+	  <table id="dataGrid" class="easyui-datagrid" ></table>
+	  <div id="editUserAuthority" class="easyui-dialog"  title="用户权限配置"  data-options="buttons: '#dlg-buttons',fit:true,closed:true,draggable:false" >
+		<form id="editUserAuthorityForm" class="form" style="padding:10px;margin:0px auto;">
+			<div class="authority">
+				<input type="hidden" name="id" id="autUserId" />
+				<!-- <div class="checkAll"><label><input id="checkAll" type="checkbox" value="checkbox"> 全选</label></div> -->
+				<div class="content"></div>
+			</div>
+			<div style="text-align: center;padding-top: 10px;">
+				<a href="javascript:;" onclick="saveUserAuthority();" class="btn btn-1" id="submit">保存</a>
+				&emsp;&emsp;
+				<a href="javascript:;" onclick="$('#editUserAuthority').dialog('close')" class="btn">取消</a>
+			</div>
+		</form>
+	</div>
+	</body>
+</html>

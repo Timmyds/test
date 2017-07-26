@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fxb.world.dao.TUserMapper" >
+  <resultMap id="BaseResultMap" type="com.fxb.world.entity.TUser" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="login_name" property="loginName" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="login_pwd" property="loginPwd" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="login_time" property="loginTime" jdbcType="TIMESTAMP" />
+    <result column="login_ip" property="loginIp" jdbcType="VARCHAR" />
+    <result column="gmt_last" property="gmtLast" jdbcType="TIMESTAMP" />
+    <result column="is_manager" property="isManager" jdbcType="BIT" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="create_by" property="createBy" jdbcType="BIGINT" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="update_by" property="updateBy" jdbcType="BIGINT" />
+    <result column="login_count" property="loginCount" jdbcType="BIGINT" />
+    <result column="error_count" property="errorCount" jdbcType="BIGINT" />
+    <result column="account_type" property="accountType" jdbcType="INTEGER" />
+    <result column="is_protection" property="isProtection" jdbcType="INTEGER" />
+    <result column="mail" property="mail" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

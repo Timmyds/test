@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>淘实惠</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/views/favicon.ico" type="image/x-icon" />
+<script src="../static/tsh/1.0.0/jquery.min.js"></script>
+<link href="../static/security/css/login.css?version=v1.0.2" rel='stylesheet' type='text/css' />
+<script type="text/javascript"> 
+$(function() {
+	  if (window.frames.length != parent.frames.length) { 
+		   parent.outlogin(); 
+		}
+});
+</script>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			 <img src="../static/security/images/login/logo.png"> 
+		</div>
+		<div id="main">
+			<div class="main-content">
+				<div class="login-form" >
+					<div id=login_div style="display:inline-block;">
+					<p style="font-size: 20px;text-align: center;color: #333333;padding-top: 40px;padding-bottom: 28px;font-family: 'Microsoft YaHei','微软雅黑';">用户登录</p>
+					<div id="login-form" class="login-div">
+						<div class="input-group">
+							<label class="i-user" for="loginName"></label> <input
+								id="loginName" name="loginName" type="text" placeholder="请输入用户名" maxlength="20">
+						</div>
+						<div class="input-group">
+							<label class="i-password" for="passWord"></label> <input
+								id="passWord" name=password type="password" placeholder="请输入用户密码" maxlength="20" autocomplete="off">
+						</div>
+						 <div class="input-group" id="inputCode" style="display: none;">
+							<label><input id="verifiedCode" name="verifiedCode" type="text" placeholder="验证码" style="width: 90px;" maxlength="4"/>
+							<img alt="验证码" src="/code.do" id="verified" style="border-radius: 5px;border:1px solid #DED6D6;outline: none;-webkit-appearance:none;height: 26px;width: 100px;margin-left: 10px;cursor: pointer;" onclick="return reloadImage();"></label>
+						</div>
+						<div class="error-text"></div>
+						<div class="submit">
+							<input type="button" class="confirmLogin" id="denglu" value="登录">
+						</div>
+						
+						<div>
+						<a href="/usercentre/supplier.do" target="_blank"   class="a-bottom" >供应商入驻 </a>
+						<a href="/views/passport.html" target="_blank" class="b-bottom">忘记密码?</a>
+					</div>
+					</div>
+					</div>
+					<div id=phone_div style="display: none;">
+					<p style="font-size: 20px;text-align: center;color: #333333;padding-top: 40px;padding-bottom: 28px;font-family: 'Microsoft YaHei','微软雅黑';">登录保护</p>
+					<div id="phone-form" class="login-div">
+						<div class="input-group" style="margin-left: 18px;margin-top: 20px;">
+							<label  style="font-family: '微软雅黑', sans-serif;">手机号码：</label><span id="phone" >***********</span>
+						</div>
+						
+						 <div class="input-group" id="inputCode"  >
+							<label><input id="phoneCode" name="phoneCode" type="text" placeholder="验证码" style="width: 100px;" maxlength="6"/>
+							 <span> <a href="javascript:void(0)" class="get-code" id="get-code"> 获取短信验证码 </a> <a href="javascript:void(0);" class="reget-code" id="reget-code" style="display: none;"> 剩余<span id="time">(300)</span>秒
+							</a>
+							</span></label>
+						</div>
+						<div class="login-text">由于您在账号安全中心启用了登录保护，您每次登录时都需要通过短信验证身份</div>
+						<div class="error-text1"></div>
+						<div class="submit">
+							<input type="button"  class="confirmLogin" onclick="loginConfirm()" value="确认"/>
+						</div>
+					</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="footer">Copyright © 2014-2017 All Rights Reserved
+		深圳智慧城电子商务有限公司 版权所有</div>
+	 <script data-main="../static/security/js/login/login.js?version=v1.0.4" src="../static/common/js/require.js?version=v1.0.2"></script> 
+
+</body>
+</html>

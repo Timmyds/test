@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>系统信息管理</title>
+	<!-- 	<script type="text/javascript" src="../../static/tsh/1.0.0/jquery/jquery-1.11.3.min.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css">
+	    <script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+	    <script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+	    <script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+	   <!--  <script src="../../static/tsh/1.0.0/locale/easyui-lang-zh_CN.js"></script> -->
+	   <!--  <script type="text/javascript" src="../../static/tsh/1.0.0/easyuiExt.js"></script>
+	    <script src="../../static/tsh/1.0.0/plugins/acceptParam/acceptParam.js"></script -->
+	    <script src="../../static/common/commonfuncode.js"></script>
+		<script src="../../static/system/js/project_list.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.datagrid-header-row{
+				height: 35px;
+			}
+			.div_span {
+				padding-left:40px;
+			}
+			#system-dialog{padding:10px;}
+			.form-group{margin-bottom:15px;clear:left;display:block;}
+			.form-group label{float:left;padding:0 10px;line-height: 34px;}
+			.form-group input.value{max-width:300px;}
+			.addGroupItem{text-align:center;}
+			#user-dialog{padding:10px 10px;}
+			.form-group-content{height: 300px;width:620px;overflow-y:auto;margin-bottom: 10px;}
+		</style>
+	</head>
+	<body>
+		 <div id="tb" style="padding: 2px 5px;">
+		 <div id="tsh-title">
+        <h3><span class="t1">应用系统管理</span> </h3>
+        <div class="title-border"></div>
+      </div>
+	      <form class="tsh-toolbar" name="form" id="form">
+			<label class="wm-usc-project-add" style="display: none;"><a href="javascript:void(0)" id="addSystem" class="btn btn-1"><i class="i-add" ></i>添加系统</a></label>
+	      </form>
+	  </div>
+	 <table id="dataGrid" class="easyui-datagrid" ></table>
+	</body>
+
+</html>
+<script type='text/html' id='system-dialog-template'>
+<div id='system-dialog'>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>系统编号:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='sysCode' name='sysCode' maxlength="50" type="text" placeholder="系统编号（最大50个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>系统名称:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='sysName' name='sysName' maxlength="20" type="text" placeholder="系统名称（2~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>系统域名:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='domain' name='domain' maxlength="100" type="text" placeholder="系统首页地址 （最大100个字符长度）" >
+</div>
+</div>
+</script>
+<script type='text/html' id='userpassword-dialog-template'>
+<div id='user-dialog'>
+<div class="form-group">
+	<label for='group'>请输入新密码:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='password' name='password' maxlength="20" type="text" placeholder="请输入新密码（20个字符长度）" >
+</div>
+</div>
+</script>
