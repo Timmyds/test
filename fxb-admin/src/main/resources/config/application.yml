@@ -1,11 +1,12 @@
 spring:
   application:
-    name: KingAdmin
-  profiles:
-    active: dev
+    name: FxbAdmin
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fxb-admin?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
@@ -37,3 +38,8 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     cache-enabled: false
 
+logging:
+  config: classpath:logback-spring.xml
+  level: debug
+server:
+  port: 8080

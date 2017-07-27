@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>系统信息管理</title>
+		<script type="text/javascript" src="../../static/tsh/1.0.0/plugins/jquery/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css">
+	    <link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css">
+	    <script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+	    <script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+	    <script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+	    <script type="text/javascript" src="../../static/common/js/easyuiExt.js"></script>
+		<script src="../../static/tsh/1.0.0/plugins/tsh/tsh.form/tsh.form.js" ></script>
+		<script src="../../static/common/commonfuncode.js"></script>
+		<script src="../../static/system/js/resources_menu_list.js?version=v3.0.0" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+
+		.datagrid-header-row{
+				height: 35px;
+			}
+			.div_span {
+				padding-left:40px;
+			}
+			.form-group{margin-bottom:15px;clear:left;display:block;}
+			.form-group label{float:left;padding:0 10px;line-height: 34px;}
+			input.radio{max-width: 24px;
+    max-height: 24px;
+    cursor: pointer;} 
+			.form-group input.value{max-width:300px;}
+			.form-group input.radio{max-width:24px;max-height:24px;cursor:pointer;}
+			
+			#system-dialog{padding:10px 10px;}
+			  .mini-grid-cell-inner  {
+			      line-height:35px;
+			    }
+		
+		</style>
+	</head>
+	<body>
+	 <div id="tb" style="padding: 2px 5px;">
+	      <form class="tsh-toolbar" name="form" id="form">
+	     	 <div style="margin-top: 10px; margin-bottom: 10px;">
+	     	 	<a href="javascript:;" style="display: none;" class="btn btn-1  wm-usc-resm-add" id="addSystem"><i class="i-add"></i>添加一级菜单</a>
+				<span class="div_span">选择系统：</span>
+				<select id="systemSelect" class="easyui-combobox" panelHeight="auto"
+					style="width: 170px; height: 30px" >
+				</select>
+				<label><span>菜单名称：</span><input id="fmenuName" class="easyui-textbox" data-options="validType:'maxLength[20]'" style="width:170px;height:30px;" prompt="菜单名称" /></label>
+				<label style="display: none;" class="wm-usc-user-find"><a href="javascript:void(0);" class="btn btn-1" id="search"><i class="i-search"></i>搜索</a></label>
+			</div>
+	      </form>
+	  </div>
+	 <table id="dataGrid" class="easyui-datagrid" ></table>
+	</body>
+
+</html>
+<script type='text/html' id='system-dialog-template'>
+<div id='system-dialog'>
+
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>菜单名称:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='menuName' name='menuName' maxlength="20" type="text" placeholder="菜单名称（2~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">&nbsp;</span>菜单别名:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='aliases' name='aliases' maxlength="20" type="text" placeholder="菜单别名（0~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>菜单地址:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='menuPath' name='menuPath' maxlength="100" type="text" placeholder="菜单地址（1~100个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>菜单编码:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='funCode' name='funCode' maxlength="50" type="text" placeholder="菜单编码（1~50个字符长度/小写）" >
+</div>
+<div class="form-group">
+	<label for='group'>排序:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='sort' name='sort' maxlength="4" type="text" placeholder="排序为数字" >
+</div>
+<div class="form-group" id="menuStatus-content">
+	<label><span class="text-red">*</span>菜单状态:</label>
+	<label><input  type='radio' name='menuStatus' checked='checked' id='status-open' value='1' />开启&nbsp;&nbsp;&nbsp;<input type='radio'  name='menuStatus' value='0' id='status-close' />关闭</label>
+</div>
+<div class="form-group" id="menuStatus-content">
+	<label><span class="text-red">*</span>菜单是否显示:</label>
+	<label ><input class="textbox " type='radio' checked='checked' name='isDisplay' id='status-open' value='0' />显示&nbsp;&nbsp;&nbsp;<input type='radio' class="textbox " name='isDisplay' value='1' id='status-close' />隐藏</label>
+</div>
+</div>
+</script>
+<script type='text/html' id='system-menu-dialog-template'>
+<div id='system-dialog'>
+<div class="form-group">
+		<label for='group'>所属系统:</label>
+	<select id="sysName-dialog" class="easyui-combobox" panelHeight="auto"
+					style="width: 170px; height: 30px" >
+				</select>
+
+</div>
+<div class="form-group">
+	<label for='group'>系统域名:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='domain' name='domain' maxlength="10" type="text" readOnly='true' >
+</div>
+<div class="form-group">
+	<label for='group'>上级菜单:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='pMenuName' name='pMenuName' readOnly='true'  type="text" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>菜单名称:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='menuName' name='menuName' maxlength="20" type="text" placeholder="菜单名称（2~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">&nbsp;</span>菜单别名:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='aliases' name='aliases' maxlength="20" type="text" placeholder="菜单名称（0~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>菜单地址:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='menuPath' name='menuPath' maxlength="100" type="text" placeholder="菜单地址（1~100个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>菜单编码:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='funCode' name='funCode' maxlength="50" type="text" placeholder="菜单编码（1~50个字符长度/小写）" >
+</div>
+<div class="form-group">
+	<label for='group'>排序:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='sort' name='sort' maxlength="4" type="text" placeholder="排序为数字" >
+</div>
+<div class="form-group" id="menuStatus-content">
+	<label><span class="text-red">*</span>菜单状态:</label>
+	<label ><input class="textbox " type='radio' checked='checked' name='menuStatus' id='status-open' value='1' />开启&nbsp;&nbsp;&nbsp;<input type='radio' class="textbox " name='menuStatus' value='0' id='status-close' />关闭</label>
+</div>
+<div class="form-group" id="menuStatus-content">
+	<label><span class="text-red">*</span>菜单是否显示:</label>
+	<label ><input class="textbox " type='radio' checked='checked' name='isDisplay' id='status-open' value='0' />显示&nbsp;&nbsp;&nbsp;<input type='radio' class="textbox " name='isDisplay' value='1' id='status-close' />隐藏</label>
+</div>
+</div>
+</script>
+
+<script type='text/html' id='system-function-dialog-template'>
+<div id='system-dialog'>
+<div class="form-group">
+		<label for='group'>所属系统:</label>
+	<select id="sysName-dialog" class="easyui-combobox" panelHeight="auto"
+					style="width: 170px; height: 30px" >
+				</select>
+
+</div>
+<div class="form-group">
+	<label for='group'>系统域名:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='domain' name='domain' maxlength="10" type="text" readOnly='true' >
+</div>
+<div class="form-group">
+	<label for='group'>所属菜单:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='pMenuName' name='pMenuName' readOnly='true'  type="text" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>功能名称:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='menuName' name='menuName' maxlength="20" type="text" placeholder="功能名称（2~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">&nbsp;</span>功能别名:</label>
+	<input class="textbox value" style="width:220px; height:28px;" id='aliases' name='aliases' maxlength="20" type="text" placeholder="菜单名称（0~20个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>功能地址:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='menuPath' name='menuPath' maxlength="100" type="text" placeholder="功能地址（1~100个字符长度）" >
+</div>
+<div class="form-group">
+	<label for='group'><span class="text-red">*</span>功能编码:</label>
+	<input class="textbox value" style="width:220px; height:28px;"  id='funCode' name='funCode' maxlength="50" type="text" placeholder="功能编码（1~50个字符长度/小写）" >
+</div>
+<div class="form-group" id="menuStatus-content">
+	<label><span class="text-red">*</span>权限状态:</label>
+	<label ><input class="textbox " type='radio' checked='checked' name='menuStatus' id='status-open' value='1' />开启&nbsp;&nbsp;&nbsp;<input type='radio' class="textbox " name='menuStatus' value='0' id='status-close' />关闭</label>
+</div>
+</div>
+</script>

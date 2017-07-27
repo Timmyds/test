@@ -5,23 +5,11 @@
 
 package com.oukingtim.domain;
 
-import com.baomidou.mybatisplus.enums.SqlMethod;
-import com.baomidou.mybatisplus.exceptions.MybatisPlusException;
-import com.baomidou.mybatisplus.mapper.Condition;
-import com.baomidou.mybatisplus.mapper.SqlHelper;
-import com.baomidou.mybatisplus.mapper.SqlRunner;
-import com.baomidou.mybatisplus.mapper.Wrapper;
-import com.baomidou.mybatisplus.plugins.Page;
-import com.baomidou.mybatisplus.toolkit.StringUtils;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 通用实体（通用字段）
@@ -29,7 +17,7 @@ import java.util.List;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public abstract class BaseModel<T extends BaseModel> implements Serializable {
+public abstract class BaseModel<T extends BaseModel<?>> implements Serializable {
     private static final long serialVersionUID = 1L;
     private String id;
 
@@ -45,4 +33,45 @@ public abstract class BaseModel<T extends BaseModel> implements Serializable {
         // TODO Auto-generated method stub
         return id;
     }
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getCreateUserId() {
+		return createUserId;
+	}
+
+	public void setCreateUserId(String createUserId) {
+		this.createUserId = createUserId;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public String getUpdateUserId() {
+		return updateUserId;
+	}
+
+	public void setUpdateUserId(String updateUserId) {
+		this.updateUserId = updateUserId;
+	}
+
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
+    
 }

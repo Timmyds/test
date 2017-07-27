@@ -1,0 +1,441 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* start editing from here */
+a {
+	text-decoration: none;
+}
+
+.txt-rt {
+	text-align: right;
+} /* text align right */
+.txt-lt {
+	text-align: left;
+} /* text align left */
+.txt-center {
+	text-align: center;
+} /* text align center */
+.float-rt {
+	float: right;
+} /* float right */
+.float-lt {
+	float: left;
+} /* float left */
+.clear {
+	clear: both;
+} /* clear float */
+.pos-relative {
+	position: relative;
+} /* Position Relative */
+.pos-absolute {
+	position: absolute;
+} /* Position Absolute */
+.vertical-base {
+	vertical-align: baseline;
+} /* vertical align baseline */
+.vertical-top {
+	vertical-align: top;
+} /* vertical align top */
+nav.vertical ul li {
+	display: block;
+} /* vertical menu */
+nav.horizontal ul li {
+	display: inline-block;
+} /* horizontal menu */
+img {
+	max-width: 100%;
+}
+/*end reset*/
+/****-----start-body----****/
+body {
+	background: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+}
+/*#header{ padding-top: 115px; padding-bottom: 24px; max-width: 1000px; margin: 0 auto}*/
+#container {
+	height: 630px;
+	position: absolute;
+	width: 100%;
+	top: 40%;
+	margin-top: -315px;
+}
+
+#header {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	font-size: 0;
+}
+
+#main {
+	background: #02c1b3\9;
+	height: 560px;
+	background: -moz-radial-gradient(50% 50% at 30% 50%,#25d9cd,#02c1b3);
+	background: -webkit-radial-gradient(50% 50% at 30% 50%,#25d9cd,#02c1b3);
+	background: radial-gradient(50% 50% at 30% 50%,#25d9cd,#02c1b3);
+	-moz-box-shadow: 1px 0px 3px rgba(120, 120, 120, 0.15) inset;
+	-webkit-box-shadow: 1px 0px 3px rgba(120, 120, 120, 0.15) inset;
+	box-shadow: 1px 0px 3px rgba(120, 120, 120, 0.15) inset;
+}
+
+#footer {
+	font-size: 14px;
+	position: fixed;
+	bottom: 0px;
+	background: #fff;
+	padding: 36px 0px;
+	color: #777777;
+	text-align: center;
+	width: 100%;
+	font-family: "microsoft yahei","微软雅黑";
+}
+
+.main-content {
+	width: 951px;
+	margin: 0 auto;
+	height: 560px;
+	position: relative;
+	background-image: url(../images/login/bg_icons.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.error-text {
+	font-size: 12px;
+	color: #ff4501;
+	background: #fecfbe url(../images/login/error.png) no-repeat 13px center;
+	padding-left: 40px;
+	border-radius: 5px;
+	clear: left;
+	overflow: hidden;
+}
+
+.error-text label {
+	line-height: 14px;
+}
+
+.login-form {
+	margin-left: 631px;
+	width: 320px;
+	height: 380px;
+	border-radius: 6px;
+	background: #FFFFFF;
+	margin-top: 90px;
+}
+
+#main  {
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+#main p {
+	text-align: center;
+}
+
+#main   a.a-bottom {
+	text-align: left;
+	color: #777777;
+	font-size: 14px;
+	font-family: "Microsoft YaHei","微软雅黑"
+}
+
+#main   a.a-bottom:hover, a.b-bottom:hover {
+	color: #21A957;
+}
+
+
+.login-div{
+	margin: 0 auto;
+	padding: 0 30px;
+	text-align: left;
+	color: #777777;
+	font-size: 14px;
+	font-family: "Microsoft YaHei","微软雅黑";
+}
+
+#verifiedCode {
+	padding: 6px;
+	float: left
+}
+
+a.b-bottom {
+	float: right;
+	color: #777777;
+	font-size: 14px;
+	font-family: "Microsoft YaHei","微软雅黑"
+}
+
+input[type="text"], input[type="password"] {
+	margin: 0;
+	text-align: left;
+	position: relative;
+	width: 198px;
+	padding: 12px;
+	padding-left: 47px;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	font-weight: 600;
+	font-size: 12px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	border: 1px solid #e1e1e1;
+	-webkit-appearance: none;
+}
+
+.input-group {
+	clear: left;
+	position: relative;
+	margin-bottom: 20px;
+	overflow:hidden;
+}
+
+label.i-user, label.i-password {
+	border: none;
+	outline: none;
+	background: #eeeeee url(../images/login/user.jpg) center center
+		no-repeat;
+	position: absolute;
+	bottom: 1px;
+	left: 1px;
+	height: 38px;
+	width: 39px;
+	display: block;
+	z-index: 1;
+	border-radius: 5px 0 0 5px
+}
+
+label.i-password {
+	background: #eeeeee url(../images/login/password.jpg) center center
+		no-repeat;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border: 1px solid #ff4501;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+}
+
+input[type="submit"] {
+	box-sizing: border-box;
+	width: 260px;
+	height: 40px;
+	padding: 3%;
+	margin-bottom: 12px;
+	background: #02c1b3;
+	font-family: '微软雅黑', sans-serif;
+	color: #ECECEC;
+	font-size: 16px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 6px;
+	transition: 0.5s;
+	-webkit-appearance: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+	color: #fff;
+}
+/****************/
+.copy-right {
+	position: absolute;
+	bottom: -19%;
+	left: 43.7%;
+}
+
+.copy-right p {
+	color: #fff;
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+
+.copy-right p a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	color: #21A957;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.copy-right p a:hover {
+	color: #fff;
+}
+.submit{
+	clear: left;
+margin-top: 10px
+}
+
+
+
+
+
+.get-code {
+	text-decoration: none;
+	display: inline-block;
+	background: url("../images/btn-bg1.png") repeat-x center center;
+	height: 30px;
+	width: 100px;
+	border-radius: 5px;
+	border: 1px solid #DBDBDB;
+	color: #737373;
+	text-align: center;
+	line-height: 28px;
+	font-size: 12px;
+	margin-left: 15px;
+}
+
+.reget-code {
+	text-decoration: none;
+	display: inline-block;
+	background: url("../images/btn-bg2.png") repeat-x center center;
+	height: 30px;
+	width: 99px;
+	border-radius: 5px;
+	border: 1px solid #DBDBDB;
+	color: #737373;
+	font-size：14px;
+	text-align: center;
+	line-height: 28px;
+	font-size: 12px;
+	margin-left: 15px;
+}
+
+#phoneCode {
+	padding: 6px;
+	float: left
+}
+
+
+.confirmLogin{
+	box-sizing: border-box;
+	width: 260px;
+	height: 40px;
+	padding: 3%;
+	margin-bottom: 12px;
+	background: #02c1b3;
+	font-family: '微软雅黑', sans-serif;
+	color: #ECECEC;
+	font-size: 16px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	border-radius: 6px;
+	transition: 0.5s;
+	-webkit-appearance: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;}
+.error-text1 {
+	font-size: 12px;
+	color: #ff4501;
+	background: #fecfbe url(../images/login/error.png) no-repeat 13px center;
+	padding-left: 40px;
+	border-radius: 5px;
+	clear: left;
+	overflow: hidden;
+}
+.login-text{
+	font-size: 12px;
+	color: #ff4501;
+	border-radius: 5px;
+	overflow: hidden;
+    background: #fff;
+    color: #777777;
+    text-align: center;
+    font-family: "microsoft yahei","微软雅黑";
+    line-height: 14px;
+    padding-bottom: 5px;
+}
+
+.error-text1 label {
+	line-height: 14px;
+}
+
+/*-----start-responsive-design------*/
+@media ( max-width :1440px) {
+}
+
+@media ( max-width :1366px) {
+}
+
+@media ( max-width :1280px) {
+}
+
+@media ( max-width :1024px) {
+}
+
+@media ( max-width :768px) {
+}
+
+@media ( max-width :640px) {
+}
+
+@media ( max-width :480px) {
+}
+
+@media ( max-width :320px) {
+}

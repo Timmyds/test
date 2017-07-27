@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<title>角色管理</title>
+	<link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/tsh/1.0.0/themes/style.css">
+    <script src="../../static/tsh/1.0.0/jquery.min.js"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.min.js"></script>
+    <script src="../../static/tsh/1.0.0/jquery.easyui.extend.min.js"></script>
+<!-- 	<script src="../../static/tsh/1.0.0/plugins/acceptParam/acceptParam.js"></script>
+	<script src="../../static/tsh/1.0.0/locale/easyui-lang-zh_CN.js"></script> -->
+	<script src="../../static/tsh/1.0.0/plugins/tsh/tsh.form/tsh.form.js" ></script>
+	<script src="../../static/common/js/base64/base64.min.js"></script>
+	<script src="../../static/system/js/commom.js"></script>
+	<script src="../../static/common/commonfuncode.js"></script>
+	<script src="../../static/authority/authority.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/authority/role_index.js" type="text/javascript" charset="utf-8"></script>
+
+	<style type="text/css">
+		    label{vertical-align: middle; padding:0 10px; height: 20px; line-height: 20px;margin: 0}
+		    label input[type=checkbox]{display: inline-block; margin: 0}
+			.authority{border: 1px #ccc solid}
+			.checkAll{height: 40px; line-height: 40px;display: inline-block;}
+			.sysrow{font-weight:bold,height: 40px; line-height: 40px;width:200px;display: inline-block;border-right: 1px solid #ccc;}
+			.row1{border-top:1px solid #ccc;}
+			.th,.row1 th{height: 40px; line-height: 40px;display: inline-block; }
+			.th{font-weight:bold }
+		    .row2 {border-top:1px solid #ccc; }
+		    .row2 label{font-weight: normal;}
+		    .row2 .th{display: inline-block; border-right: 1px solid #ccc;}
+		    .row3{display: inline-block;height: 40px; line-height: 40px;}
+		    .text-danger{display: inline-block;}
+		</style>
+</head>
+<body style="margin:0 20px;">
+	  <div id="tb" >
+		  	<div id="tsh-title">
+	        <h3><span class="t1">角色管理</span></h3>
+	        <div class="title-border"></div>
+	      </div>
+	      <form class="tsh-toolbar">
+	        <label ><a href="javascript:void(0)" onclick="addPersons()" class="btn btn-2 wm-usc-role-add" style="display: none;"><i class="i-add" ></i>添加角色</a></label>
+	        <label><span>角色名称：</span><input id="roleName" name="roleName" class="easyui-textbox" style="width:170px;height:30px;"
+	         data-options="validType:'maxLength[20]'" prompt="请输入角色名称" ></label>
+	        <label ><a href="javascript:void(0);" class="btn btn-1 wm-usc-role-find" style="display: none;" id="search"><i class="i-search "></i>查询</a></label>
+	      </form>
+	  </div>
+	  <table id="dataGrid" class="easyui-datagrid" ></table>
+
+	<div id="addRole" class="easyui-dialog"  title="添加/编辑角色"  data-options="buttons: '#dlg-buttons',fit:true,closed:true,draggable:false" >
+		<form id="addSysRoleForm" class="form" style="padding:10px;margin:0px auto;">
+			<div style="padding: 10px;">
+				<input type="hidden" name="id" id="add_roleId" />
+				<label>
+					<span class="text-red">*</span>角色名称：<input type="text" id="add_roleName" name="roleName" style="width: 170px; height: 30px; margin-right: 10px; vertical-align: middle;"  rules='{"maxLength":20}' prompt="请输入角色名称" class="easyui-textbox" >
+					<span>长度为2-20位的中文、英文或数字</span>
+				</label>
+				<label><textarea class="form-control" id="add_remarks" rules='{"maxLength":100}' name="remarks" style="width: 90%; height: 90px; margin-top: 2px; resize: none" placeholder="请填写角色说明  100字以内"></textarea></label>
+			</div>
+			<div class="authority">
+				<div class="checkAll"><label><input id="checkAll" type="checkbox" value="checkbox"> 全选</label></div>
+				<div class="content"></div>
+			</div>
+			<div style="text-align: center;padding-top: 10px;">
+				<a href="javascript:;" onclick="saveRole();" class="btn btn-1" id="submit">保存</a>
+				&emsp;&emsp;
+				<a href="javascript:;" onclick="$('#addRole').dialog('close')" class="btn">取消</a>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

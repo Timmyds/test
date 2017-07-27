@@ -1,0 +1,31 @@
+.account-icon{
+	display: inline-block;
+}
+.account-icon i{
+	float: left;
+}
+.account-icon .account-icon-right{
+	float: left;
+	margin-left: 12px;
+}
+.account-icon-text{
+	padding-left: 3px;
+	font-size: 14px;
+	color: #333333;
+	padding-top: 5px;
+	margin: 0;
+}
+.account-icon-pri{
+	font-size: 16px;
+	color: #ff6363;
+	padding-top: 3px;
+	margin: 0;
+}
+.account-icon-num{
+	font-size: 16px;
+	color: #ff6363;
+	padding-top: 3px;
+	margin: 0;
+	padding-left: 3px;
+}
+
