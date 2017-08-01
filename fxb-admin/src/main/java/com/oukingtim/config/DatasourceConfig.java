@@ -6,11 +6,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesBinding;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean;
 
 @Configuration
 public class DatasourceConfig {
@@ -115,6 +118,15 @@ public class DatasourceConfig {
 	}
 
 	
-	
+
+	@Bean(name = "sessionFactory")
+	@ConfigurationProperties(prefix = "mybatis-plus")
+	@ConfigurationPropertiesBinding()
+	@Primary
+	public MybatisSqlSessionFactoryBean crmSessionFactory(@Qualifier(value = "dataSource") DataSource dataSource) {
+		MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
+		bean.setDataSource(dataSource);
+		return bean;
+	}
 
 }

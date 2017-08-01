@@ -7,6 +7,20 @@ spring:
     url: jdbc:mysql://localhost:3306/fxb-admin?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
+    filters: mergeStat,wall,logback
+    initialSize: 5
+    maxActive: 50
+    minIdle: 5
+    maxWait: 6000
+    validationQuery: SELECT 'x'
+    testOnBorrow: true
+    testOnReturn: true
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    removeAbandoned: true
+    removeAbandonedTimeout: 1800
+    logAbandoned: true
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
